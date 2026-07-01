@@ -34,16 +34,16 @@ By aggressively targeting the Attention layers during fine-tuning (while leaving
 ### Ollama / LM Studio (GGUF)
 You can seamlessly run the GGUF version locally using Ollama:
 ```bash
-ollama run hf.co/TobiasLogic/Qwen2.5-Coder-32B-Uncensored:Q4_K_M
+ollama run hf.co/TobiasLogic/Qwen2.5-Coder-32B-Python-Specialist:Q4_K_M
 ```
 
 ### Transformers
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-tokenizer = AutoTokenizer.from_pretrained("TobiasLogic/Qwen2.5-Coder-32B-Uncensored")
+tokenizer = AutoTokenizer.from_pretrained("TobiasLogic/Qwen2.5-Coder-32B-Python-Specialist")
 model = AutoModelForCausalLM.from_pretrained(
-    "TobiasLogic/Qwen2.5-Coder-32B-Uncensored",
+    "TobiasLogic/Qwen2.5-Coder-32B-Python-Specialist",
     device_map="auto"
 )
 
