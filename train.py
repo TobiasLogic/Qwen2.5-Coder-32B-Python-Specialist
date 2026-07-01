@@ -13,7 +13,7 @@ CANDIDATE_TARGETS = [
 ]
 def parse_args():
     p = argparse.ArgumentParser(
-        description="QLoRA fine-tune Qwen3-Coder-30B-A3B (MoE) with Unsloth.",
+        description="QLoRA fine-tune Qwen2.5-Coder-32B into a Python specialist with Unsloth.",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     p.add_argument("--model", default=DEFAULT_MODEL, help="HF model id or local path.")

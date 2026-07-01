@@ -6,7 +6,7 @@ import subprocess
 import sys
 from pathlib import Path
 os.environ.setdefault("HF_HUB_ENABLE_HF_TRANSFER", "1")
-DEFAULT_MODEL = "huihui-ai/Huihui-Qwen3-Coder-30B-A3B-Instruct-abliterated"
+DEFAULT_MODEL = "unsloth/Qwen2.5-Coder-32B-Instruct-bnb-4bit"
 def parse_args():
     p = argparse.ArgumentParser(
         description="Merge LoRA + export merged safetensors and GGUF (q4_k_m).",
@@ -158,7 +158,7 @@ def write_ollama_modelfile(gguf_path: str, gguf_dir: str):
     with open(modelfile, "w") as f:
         f.write(content)
     print(f"[ollama] wrote {modelfile}")
-    print(f"[ollama] import with:  ollama create qwen3-coder-abliterated -f {modelfile}")
+    print(f"[ollama] import with:  ollama create qwen2.5-coder-32b-python-specialist -f {modelfile}")
 def main():
     args = parse_args()
     from unsloth import FastModel
